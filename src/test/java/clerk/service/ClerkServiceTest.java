@@ -2,6 +2,7 @@ package clerk.service;
 
 import clerk.entity.Buyer;
 import clerk.entity.Clerk;
+import clerk.entity.Money;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -14,10 +15,10 @@ public class ClerkServiceTest {
 
     @Test
     public void checkClerkService() {
-        Buyer first = new Buyer(25);
-        Buyer second = new Buyer(25);
-        Buyer third = new Buyer(50);
-        Buyer fourth = new Buyer(100);
+        Buyer first = new Buyer(Money.TWENTY_FIVE);
+        Buyer second = new Buyer(Money.TWENTY_FIVE);
+        Buyer third = new Buyer(Money.FIFTY);
+        Buyer fourth = new Buyer(Money.ONE_HUNDREAD);
 
         List<Buyer> buyers = new ArrayList<>();
         buyers.add(first);

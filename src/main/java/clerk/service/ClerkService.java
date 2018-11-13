@@ -25,7 +25,8 @@ public final class ClerkService {
         List<Integer> cashbox = clerk.getCashbox();
         cashbox.sort(Collections.reverseOrder());
         for (Buyer buyer : buyers) {
-            change = buyer.getMoney() - TICKET_PRICE;
+            Integer buyerMoney = buyer.getMoney().getAmount();
+            change = buyerMoney - TICKET_PRICE;
             if (change == 0) {
                 cashbox.add(TICKET_PRICE);
                 continue;
@@ -39,7 +40,7 @@ public final class ClerkService {
                         cashboxIterator.remove();
                     }
                 }
-                cashbox.add(buyer.getMoney());
+                cashbox.add(buyerMoney);
             } else {
                 clerk.setCashbox(cashbox);
                 return false;

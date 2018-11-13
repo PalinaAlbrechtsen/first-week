@@ -11,5 +11,5 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Buyer {
 
-    private Integer money;
+    private Money money;
 }

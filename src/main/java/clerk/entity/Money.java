@@ -2,8 +2,6 @@ package clerk.entity;
 
 import lombok.AllArgsConstructor;
 
-import java.util.Random;
-
 @AllArgsConstructor
 public enum Money {
 
@@ -14,7 +12,12 @@ public enum Money {
     private static final int SIZE = values().length;
     private Integer amount;
 
-    public static Integer getAmount() {
-        return values()[new Random().nextInt(SIZE)].amount;
+//    public static Integer getAmount() {
+//        return values()[new Random().nextInt(SIZE)].amount;
+//    }
+
+
+    public Integer getAmount() {
+        return amount;
     }
 }
